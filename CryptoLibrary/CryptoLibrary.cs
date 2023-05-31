@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace CryptoLibrary {
@@ -80,12 +80,14 @@ public class CryptoLibraryClass {
       throw new ArgumentException("Invalid operation specified. Operation must be 0 or 1.");
     }
   }
+
   /// <summary>
   /// Calculates the HOTP (HMAC-based One-Time Password) value based on the specified key and counter.
   /// </summary>
   /// <param name="key">The HMAC key.</param>
   /// <param name="counter">The counter value.</param>
   /// <returns>The calculated HOTP value.</returns>
+
   public int HOTP(byte[] key, int counter) {
     CryptoLibraryClass crypto = new CryptoLibraryClass(key);
     byte[] hmacBytes = crypto.ComputeHMACSHA1(key, BitConverter.GetBytes(counter));
@@ -93,11 +95,13 @@ public class CryptoLibraryClass {
     int hotpValue = (int)(sbits % 1000000);
     return hotpValue;
   }
+
   /// <summary>
   /// Calculates the dynamic truncation value based on the provided HMAC-SHA1 hash.
   /// </summary>
   /// <param name="hmacBytes">The HMAC-SHA1 hash as a byte array.</param>
   /// <returns>The dynamic truncation value as an unsigned integer.</returns>
+
   private int CalculateDynamicTruncation(byte[] hmacBytes) {
     int offset = hmacBytes[19] & 0xf;
     int bin_code = ((hmacBytes[offset] & 0x7f) << 24)
@@ -106,16 +110,19 @@ public class CryptoLibraryClass {
                    | (hmacBytes[offset + 3] & 0xff);
     return bin_code;
   }
+
   /// <summary>
   /// Computes the SHA-1 hash of the given data.
   /// </summary>
   /// <param name="data">The data to compute the hash for.</param>
   /// <returns>The computed SHA-1 hash.</returns>
+
   public byte[] ComputeSHA1(byte[] data) {
     using (SHA1 sha1 = SHA1.Create()) {
       return sha1.ComputeHash(data);
     }
   }
+
 
   /// <summary>
   /// Computes the HMAC-SHA1 hash of the given data using the provided key.
@@ -123,17 +130,20 @@ public class CryptoLibraryClass {
   /// <param name="data">The data to compute the HMAC-SHA1 hash for.</param>
   /// <param name="key">The HMAC-SHA1 key.</param>
   /// <returns>The computed HMAC-SHA1 hash.</returns>
+
   public byte[] ComputeHMACSHA1(byte[] data, byte[] key) {
     using (HMACSHA1 hmacSha1 = new HMACSHA1(key)) {
       return hmacSha1.ComputeHash(data);
     }
   }
 
+
   /// <summary>
   /// Computes the SHA-256 hash of the given data.
   /// </summary>
   /// <param name="data">The data to compute the hash for.</param>
   /// <returns>The computed SHA-256 hash.</returns>
+
   public byte[] ComputeSHA256(byte[] data) {
     using (SHA256 sha256 = SHA256.Create()) {
       return sha256.ComputeHash(data);
@@ -167,10 +177,12 @@ public class CryptoLibraryClass {
   /// <param name="outputFile">The path of the output file.</param>
   private void ConvertToBinary(string inputFile, string outputFile) {
     byte[] buffer;
+
     using (FileStream fileStream = File.OpenRead(inputFile)) {
       buffer = new byte[fileStream.Length];
       fileStream.Read(buffer, 0, buffer.Length);
     }
+
     using (FileStream fileStream = File.OpenWrite(outputFile)) {
       fileStream.Write(buffer, 0, buffer.Length);
     }
@@ -205,6 +217,7 @@ public class CryptoLibraryClass {
       aes.IV = new byte[16];
       aes.Mode = CipherMode.CBC;
       aes.Padding = PaddingMode.PKCS7;
+
       using (ICryptoTransform encryptor = aes.CreateEncryptor()) {
         return encryptor.TransformFinalBlock(data, 0, data.Length);
       }
@@ -223,6 +236,7 @@ public class CryptoLibraryClass {
       aes.IV = new byte[16];
       aes.Mode = CipherMode.CBC;
       aes.Padding = PaddingMode.PKCS7;
+
       using (ICryptoTransform decryptor = aes.CreateDecryptor()) {
         return decryptor.TransformFinalBlock(data, 0, data.Length);
       }
