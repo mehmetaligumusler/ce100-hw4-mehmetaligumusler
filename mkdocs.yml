@@ -1,0 +1,27 @@
+# Project information
+site_name: "CE100-HW4-ETERNALS"
+
+docs_dir: docs  # Where to find the English markdown files
+site_dir: site  # Where to put the English HTML files
+site_author: 'Gokay Dervisoglu & Mehmet Ali Gumusler'
+site_url: 'https://mehmetaligumusler.github.io/ce100-hw4-mehmetaligumusler/'
+site_description: >-
+    .Net Core Project Template for CI/CD
+
+# Repository
+repo_name: 'GitHub'
+repo_url: 'https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler'
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2022 - 2023 Gokay Dervisoglu & Mehmet Ali Gumusler
+
+theme:
+  name: material
+  
+nav:
+    - Introduction: 'index.md'
+    - Developers: 'developers.md'
+    - 'Doxygen': 'doxygen/html/index.html'
+    - 'Test Coverage': 'coveragereport/index.html'
+    - 'Doc Coverage': 'coverxygen/index.html'
