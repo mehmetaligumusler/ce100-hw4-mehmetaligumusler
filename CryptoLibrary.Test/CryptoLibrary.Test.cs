@@ -164,6 +164,22 @@ public class CryptoLibraryTest {
   }
 
   /// <summary>
+  /// Tests the ByteArrayToHex method to ensure correct conversion from byte array to hexadecimal string.
+  /// </summary>
+  [Fact]
+  public void Test_ByteArrayToHex() {
+    // Arrange
+    byte[] bytes = new byte[] { 0x12, 0xAB, 0x34, 0xCD };
+    string expectedHex = "12ab34cd";
+    byte[] key = Encoding.UTF8.GetBytes("SampleKey1234567");
+    var crypto = new CryptoLibraryClass(key);
+    // Act
+    string actualHex = crypto.ByteArrayToHex(bytes);
+    // Assert
+    Assert.Equal(expectedHex, actualHex);
+  }
+
+  /// <summary>
   /// Converts a byte array to a hexadecimal string.
   /// </summary>
   /// <param name="bytes">The byte array to convert.</param>
@@ -267,4 +283,3 @@ public class HOTPTests {
   }
 }
 }
-
