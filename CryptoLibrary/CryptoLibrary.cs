@@ -60,13 +60,32 @@ public class CryptoLibraryClass {
       throw new ArgumentException("Invalid operation specified. Operation must be 0 or 1.");
     }
   }
+  public int HOTP(byte[] key, int counter) {
+    CryptoLibraryClass crypto = new CryptoLibraryClass(key);
+    byte[] hmacBytes = crypto.ComputeHMACSHA1(key, BitConverter.GetBytes(counter));
+    int sbits = CalculateDynamicTruncation(hmacBytes);
+    int hotpValue = (int)(sbits % 1000000);
+    return hotpValue;
+  }
 
+  private int CalculateDynamicTruncation(byte[] hmacBytes) {
+    int offset = hmacBytes[19] & 0xf;
+    int bin_code = ((hmacBytes[offset] & 0x7f) << 24)
+                   | ((hmacBytes[offset + 1] & 0xff) << 16)
+                   | ((hmacBytes[offset + 2] & 0xff) << 8)
+                   | (hmacBytes[offset + 3] & 0xff);
+    return bin_code;
+  }
   public byte[] ComputeSHA1(byte[] data) {
     using (SHA1 sha1 = SHA1.Create()) {
       return sha1.ComputeHash(data);
     }
   }
-
+  public byte[] ComputeHMACSHA1(byte[] data, byte[] key) {
+    using (HMACSHA1 hmacSha1 = new HMACSHA1(key)) {
+      return hmacSha1.ComputeHash(data);
+    }
+  }
   public byte[] ComputeSHA256(byte[] data) {
     using (SHA256 sha256 = SHA256.Create()) {
       return sha256.ComputeHash(data);
@@ -136,7 +155,14 @@ public class CryptoLibraryClass {
     return BitConverter.ToInt32(digest, 0);
   }
 
+  public string ByteArrayToHex(byte[] bytes) {
+    StringBuilder hex = new StringBuilder(bytes.Length * 2);
 
+    foreach (byte b in bytes)
+      hex.AppendFormat("{0:x2}", b);
+
+    return hex.ToString();
+  }
 
 }
 }
