@@ -60,13 +60,32 @@ public class CryptoLibraryClass {
       throw new ArgumentException("Invalid operation specified. Operation must be 0 or 1.");
     }
   }
+  public int HOTP(byte[] key, int counter) {
+    CryptoLibraryClass crypto = new CryptoLibraryClass(key);
+    byte[] hmacBytes = crypto.ComputeHMACSHA1(key, BitConverter.GetBytes(counter));
+    int sbits = CalculateDynamicTruncation(hmacBytes);
+    int hotpValue = (int)(sbits % 1000000);
+    return hotpValue;
+  }
 
+  private int CalculateDynamicTruncation(byte[] hmacBytes) {
+    int offset = hmacBytes[19] & 0xf;
+    int bin_code = ((hmacBytes[offset] & 0x7f) << 24)
+                   | ((hmacBytes[offset + 1] & 0xff) << 16)
+                   | ((hmacBytes[offset + 2] & 0xff) << 8)
+                   | (hmacBytes[offset + 3] & 0xff);
+    return bin_code;
+  }
   public byte[] ComputeSHA1(byte[] data) {
     using (SHA1 sha1 = SHA1.Create()) {
       return sha1.ComputeHash(data);
     }
   }
-
+  public byte[] ComputeHMACSHA1(byte[] data, byte[] key) {
+    using (HMACSHA1 hmacSha1 = new HMACSHA1(key)) {
+      return hmacSha1.ComputeHash(data);
+    }
+  }
   public byte[] ComputeSHA256(byte[] data) {
     using (SHA256 sha256 = SHA256.Create()) {
       return sha256.ComputeHash(data);
@@ -89,10 +108,12 @@ public class CryptoLibraryClass {
 
   private void ConvertToBinary(string inputFile, string outputFile) {
     byte[] buffer;
+
     using (FileStream fileStream = File.OpenRead(inputFile)) {
       buffer = new byte[fileStream.Length];
       fileStream.Read(buffer, 0, buffer.Length);
     }
+
     using (FileStream fileStream = File.OpenWrite(outputFile)) {
       fileStream.Write(buffer, 0, buffer.Length);
     }
@@ -114,6 +135,7 @@ public class CryptoLibraryClass {
       aes.IV = new byte[16];
       aes.Mode = CipherMode.CBC;
       aes.Padding = PaddingMode.PKCS7;
+
       using (ICryptoTransform encryptor = aes.CreateEncryptor()) {
         return encryptor.TransformFinalBlock(data, 0, data.Length);
       }
@@ -126,6 +148,7 @@ public class CryptoLibraryClass {
       aes.IV = new byte[16];
       aes.Mode = CipherMode.CBC;
       aes.Padding = PaddingMode.PKCS7;
+
       using (ICryptoTransform decryptor = aes.CreateDecryptor()) {
         return decryptor.TransformFinalBlock(data, 0, data.Length);
       }
