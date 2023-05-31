@@ -5,11 +5,11 @@ using CryptoLibrary;
 /// This class demonstrates the usage of the CryptoTrailLibrary.
 /// </summary>
 internal class Program {
-  /// <summary>
-  /// The entry point of the application.
-  /// </summary>
-  /// <param name="args">Command-line arguments.</param>
-  private static void Main(string[] args) {
+    /// <summary>
+    /// The entry point of the application.
+    /// </summary>
+    /// <param name="args">Command-line arguments.</param>
+    private static void Main(string[] args) {
     Console.WriteLine("Crypto Application Running..");
     /// Create a key for encryption
     byte[] key = Encoding.UTF8.GetBytes("D2F4A67B890CDE51");
