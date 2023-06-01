@@ -1,10 +1,9 @@
 # CE100, Homework 4
 
-# Visual Studio .NET Core Project Template
-
 ## Releases
 
-- [![GitHub release badge](https://badgen.net/github/release/gokaydervisoglu/CryptoTrail2023)](https://github.com/gokaydervisoglu/CryptoTrail2023/releases/latest)
+- [![GitHub release badge](https://badgen.net/github/release/mehmetaligumusler/
+ce100-hw4-mehmetaligumusler)](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/releases/latest)
 
 ## Platforms
 
@@ -16,7 +15,7 @@
 
 ## Test Coverage
 
-[![.NET Windows + Doxygen + Test +  Release](https://github.com/gokaydervisoglu/CryptoTrail2023/actions/workflows/build_check_ub_win.yml/badge.svg?branch=main)](https://github.com/gokaydervisoglu/CryptoTrail2023/actions/workflows/build_check_ub_win.yml)
+[![.NET Windows + Doxygen + Test +  Release](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/actions/workflows/build_check_ubuntu_windows.yml/badge.svg?branch=main)](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/actions/workflows/build_check_ubuntu_windows.yml)
 
 **Coverage**
 
@@ -36,13 +35,13 @@
 
 ## Eternals Team
 
-Members;
+### Members;
 
 - Mehmet Ali GUMUSLER, (mehmetali_gumusler21@erdogan.edu.tr)
 
 - Gökay DERVISOĞLU, (gokay_dervisoglu21@erdogan.edu.tr)
 
-Instructor: 
+### Instructor: 
 
 - Ugur CORUH
 
@@ -50,30 +49,26 @@ Instructor:
 
 Some algorithms in C#.
 
-
-
-
-
-### Project Description
+## Project Description
 
 CE100, Homework 4
 
-- ### Installation
+### Installation
 
-- ### Usage
+### Usage
 
-- ### Contributing
+### Contributing
 
-- ### License
+### License
 
-- ### Dependencies
+### Dependencies
 
-- ### Features
+### Features
 
-- ### Testing
+### Testing
 
-- ### Support
+### Support
 
-- ### Contact
+### Contact
 
-- ### Acknowledgments
+### Acknowledgments
