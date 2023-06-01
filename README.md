@@ -1,9 +1,5 @@
 # CE100, Homework 4 / Eternals Team 
 
-## Project Description
-
-CE100, Homework 4
-
 ## Releases
 
 - [![GitHub release badge](https://badgen.net/github/release/mehmetaligumusler/ce100-hw4-mehmetaligumusler)](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/releases/latest)
@@ -36,7 +32,9 @@ CE100, Homework 4
 
 - ![Method Coverage](assets/badge_methodcoverage.svg)
 
+### Project Description
 
+CE100, Homework 4
 
 ### Installation
 
