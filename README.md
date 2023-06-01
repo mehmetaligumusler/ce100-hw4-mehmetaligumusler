@@ -14,7 +14,7 @@
 
 ## Test Coverage
 
-[![.NET Windows + Doxygen + Test +  Release](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/actions/workflows/build_check_ubuntu_windows.yml/badge.svg?branch=main)](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/actions/workflows/build_check_ubuntu_windows.yml)
+[![.NET Core Release with Test Coverage Control](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/actions/workflows/build_check_ubuntu_windows.yml/badge.svg)](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/actions/workflows/build_check_ubuntu_windows.yml)
 
 **Coverage**
 
