@@ -46,31 +46,31 @@ public class CryptoLibraryClass {
 
     if (operation == 1) {
       byte[] fileData = File.ReadAllBytes(newsourceFilePath);
-      byte[] sha1Digest = crypto.ComputeSHA1(fileData);
-      byte[] sha256Digest = crypto.ComputeSHA256(fileData);
-      byte[] buffer = crypto.CreateBuffer(sha1Digest, fileData, sha256Digest);
+      byte[] sha1D = crypto.ComputeSHA1(fileData);
+      byte[] sha256D = crypto.ComputeSHA256(fileData);
+      byte[] buffer = crypto.CreateBuffer(sha1D, fileData, sha256D);
       byte[] encryptedBuffer = crypto.EncryptData(buffer);
       File.WriteAllBytes(destFilePath, encryptedBuffer);
-      return crypto.GetPasswordFromDigest(sha256Digest);
+      return crypto.GetPasswordFromDigest(encryptedBuffer);
     } else if (operation == 0) {
       byte[] encryptedBuffer = File.ReadAllBytes(sourceFilePath);
       byte[] decryptedData = crypto.DecryptData(encryptedBuffer);
       int length = BitConverter.ToInt32(decryptedData, 0);
-      int sha1DigestOffset = 4;
-      int fileDataOffset = 24;
-      int sha256DigestOffset = 24 + length;
-      byte[] sha1Digest = new byte[20];
-      Buffer.BlockCopy(decryptedData, sha1DigestOffset, sha1Digest, 0, 20);
+      int sha1D_Offset = 4;
+      int fileData_Offset = 24;
+      int sha256D_Offset = 24 + length;
+      byte[] sha1D = new byte[20];
+      Buffer.BlockCopy(decryptedData, sha1D_Offset, sha1D, 0, 20);
       byte[] fileData = new byte[length];
-      Buffer.BlockCopy(decryptedData, fileDataOffset, fileData, 0, length);
-      byte[] sha256Digest = new byte[32];
-      Buffer.BlockCopy(decryptedData, sha256DigestOffset, sha256Digest, 0, 32);
-      byte[] calculatedSha1Digest = crypto.ComputeSHA1(fileData);
-      byte[] calculatedSha256Digest = crypto.ComputeSHA256(fileData);
-      bool sha1Validation = crypto.CompareHashes(sha1Digest, calculatedSha1Digest);
-      bool sha256Validation = crypto.CompareHashes(sha256Digest, calculatedSha256Digest);
+      Buffer.BlockCopy(decryptedData, fileData_Offset, fileData, 0, length);
+      byte[] sha256D = new byte[32];
+      Buffer.BlockCopy(decryptedData, sha256D_Offset, sha256D, 0, 32);
+      byte[] calsha1D = crypto.ComputeSHA1(fileData);
+      byte[] calsha256D = crypto.ComputeSHA256(fileData);
+      bool sha1Val = crypto.CompareHashes(sha1D, calsha1D);
+      bool sha256Val = crypto.CompareHashes(sha256D, calsha256D);
 
-      if (sha1Validation && sha256Validation) {
+      if (sha1Val && sha256Val) {
         File.WriteAllBytes(destFilePath, fileData);
       }
 
@@ -162,12 +162,10 @@ public class CryptoLibraryClass {
   /// <param name="outputFile">The path of the output file.</param>
   private void ConvertToBinary(string inputFile, string outputFile) {
     byte[] buffer;
-
     using (FileStream fileStream = File.OpenRead(inputFile)) {
       buffer = new byte[fileStream.Length];
       fileStream.Read(buffer, 0, buffer.Length);
     }
-
     using (FileStream fileStream = File.OpenWrite(outputFile)) {
       fileStream.Write(buffer, 0, buffer.Length);
     }
@@ -175,17 +173,17 @@ public class CryptoLibraryClass {
   /// <summary>
   /// Creates a buffer by combining the SHA1 digest, file data, and SHA256 digest.
   /// </summary>
-  /// <param name="sha1Digest">The SHA1 digest.</param>
+  /// <param name="sha1D">The SHA1 digest.</param>
   /// <param name="fileData">The file data.</param>
-  /// <param name="sha256Digest">The SHA256 digest.</param>
+  /// <param name="sha256D">The SHA256 digest.</param>
   /// <returns>The combined buffer.</returns>
-  private byte[] CreateBuffer(byte[] sha1Digest, byte[] fileData, byte[] sha256Digest) {
-    int bufferLength = 4 + sha1Digest.Length + fileData.Length + sha256Digest.Length + BlockSizeInBytes;
+  private byte[] CreateBuffer(byte[] sha1D, byte[] fileData, byte[] sha256D) {
+    int bufferLength = 4 + sha1D.Length + fileData.Length + sha256D.Length + BlockSizeInBytes;
     byte[] buffer = new byte[bufferLength];
     Buffer.BlockCopy(BitConverter.GetBytes(fileData.Length), 0, buffer, 0, 4);
-    Buffer.BlockCopy(sha1Digest, 0, buffer, 4, sha1Digest.Length);
-    Buffer.BlockCopy(fileData, 0, buffer, 4 + sha1Digest.Length, fileData.Length);
-    Buffer.BlockCopy(sha256Digest, 0, buffer, 4 + sha1Digest.Length + fileData.Length, sha256Digest.Length);
+    Buffer.BlockCopy(sha1D, 0, buffer, 4, sha1D.Length);
+    Buffer.BlockCopy(fileData, 0, buffer, 4 + sha1D.Length, fileData.Length);
+    Buffer.BlockCopy(sha256D, 0, buffer, 4 + sha1D.Length + fileData.Length, sha256D.Length);
     return buffer;
   }
   /// <summary>
@@ -199,7 +197,6 @@ public class CryptoLibraryClass {
       aes.IV = new byte[16];
       aes.Mode = CipherMode.CBC;
       aes.Padding = PaddingMode.PKCS7;
-
       using (ICryptoTransform encryptor = aes.CreateEncryptor()) {
         return encryptor.TransformFinalBlock(data, 0, data.Length);
       }
@@ -216,7 +213,6 @@ public class CryptoLibraryClass {
       aes.IV = new byte[16];
       aes.Mode = CipherMode.CBC;
       aes.Padding = PaddingMode.PKCS7;
-
       using (ICryptoTransform decryptor = aes.CreateDecryptor()) {
         return decryptor.TransformFinalBlock(data, 0, data.Length);
       }

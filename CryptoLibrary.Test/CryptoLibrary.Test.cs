@@ -225,10 +225,10 @@ public class HOTPTests {
   /// </summary>
   [Fact]
   public void HOTP_Test() {
-    byte[] key = new byte[] { 0x1f, 0x86, 0x98, 0x69, 0x0e, 0x02, 0xca, 0x16, 0x61, 0x85, 0x50, 0xef, 0x7f, 0x19, 0xda, 0x8e };
+    byte[] key = new byte[] { 0x1f, 0x86, 0x98, 0xca, 0x16, 0x61, 0xca, 0x16, 0x61, 0x85, 0x50, 0xef, 0x7f, 0x19, 0xda, 0x8e };
     CryptoLibraryClass crypto = new CryptoLibraryClass(key);
     int counter = 86351;
-    int expected = 406818;
+    int expected = 231756;
     int result = crypto.HOTP(key, counter);
     Assert.Equal(result, expected);
   }
@@ -237,10 +237,10 @@ public class HOTPTests {
   /// </summary>
   [Fact]
   public void HOTP_Test2() {
-    byte[] key = new byte[] { 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x30, 0x7f, 0x19, 0xda, 0x8e, 0x7f, 0x19 };
+    byte[] key = new byte[] { 0x31, 0xca, 0x16, 0x61, 0x35, 0x36, 0x37, 0x38, 0x39, 0x30, 0xca, 0x16, 0x61, 0x8e, 0x7f, 0x19 };
     CryptoLibraryClass crypto = new CryptoLibraryClass(key);
     int counter = 332677;
-    int expected = 276093;
+    int expected = 702740;
     int result = crypto.HOTP(key, counter);
     Assert.Equal(result, expected);
   }
@@ -249,10 +249,10 @@ public class HOTPTests {
   /// </summary>
   [Fact]
   public void HOTP_Test3() {
-    byte[] key = Encoding.ASCII.GetBytes("O344A661890CDE51");
+    byte[] key = Encoding.ASCII.GetBytes("8361A196790CDE51");
     CryptoLibraryClass crypto = new CryptoLibraryClass(key);
-    int counter = 1;
-    int expected = 997037;
+    int counter = 61;
+    int expected = 543025;
     int result = crypto.HOTP(key, counter);
     Assert.Equal(result, expected);
   }
