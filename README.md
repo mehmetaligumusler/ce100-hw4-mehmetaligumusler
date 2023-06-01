@@ -2,8 +2,7 @@
 
 ## Releases
 
-- [![GitHub release badge](https://badgen.net/github/release/mehmetaligumusler/
-ce100-hw4-mehmetaligumusler)](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/releases/latest)
+- [![GitHub release badge](https://badgen.net/github/release/mehmetaligumusler/ce100-hw4-mehmetaligumusler)](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/releases/latest)
 
 ## Platforms
 
