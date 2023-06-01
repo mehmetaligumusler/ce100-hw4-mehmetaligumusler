@@ -6,7 +6,6 @@ namespace CryptoLibrary {
 /// Class for file transformation operations.
 /// </summary>
 public class CryptoLibraryClass {
-
   /// <summary>
   /// The size of the encryption key in bytes.
   /// </summary>
@@ -80,14 +79,12 @@ public class CryptoLibraryClass {
       throw new ArgumentException("Invalid operation specified. Operation must be 0 or 1.");
     }
   }
-
   /// <summary>
   /// Calculates the HOTP (HMAC-based One-Time Password) value based on the specified key and counter.
   /// </summary>
   /// <param name="key">The HMAC key.</param>
   /// <param name="counter">The counter value.</param>
   /// <returns>The calculated HOTP value.</returns>
-
   public int HOTP(byte[] key, int counter) {
     CryptoLibraryClass crypto = new CryptoLibraryClass(key);
     byte[] hmacBytes = crypto.ComputeHMACSHA1(key, BitConverter.GetBytes(counter));
@@ -95,13 +92,11 @@ public class CryptoLibraryClass {
     int hotpValue = (int)(sbits % 1000000);
     return hotpValue;
   }
-
   /// <summary>
   /// Calculates the dynamic truncation value based on the provided HMAC-SHA1 hash.
   /// </summary>
   /// <param name="hmacBytes">The HMAC-SHA1 hash as a byte array.</param>
   /// <returns>The dynamic truncation value as an unsigned integer.</returns>
-
   private int CalculateDynamicTruncation(byte[] hmacBytes) {
     int offset = hmacBytes[19] & 0xf;
     int bin_code = ((hmacBytes[offset] & 0x7f) << 24)
@@ -110,46 +105,37 @@ public class CryptoLibraryClass {
                    | (hmacBytes[offset + 3] & 0xff);
     return bin_code;
   }
-
   /// <summary>
   /// Computes the SHA-1 hash of the given data.
   /// </summary>
   /// <param name="data">The data to compute the hash for.</param>
   /// <returns>The computed SHA-1 hash.</returns>
-
   public byte[] ComputeSHA1(byte[] data) {
     using (SHA1 sha1 = SHA1.Create()) {
       return sha1.ComputeHash(data);
     }
   }
-
-
   /// <summary>
   /// Computes the HMAC-SHA1 hash of the given data using the provided key.
   /// </summary>
   /// <param name="data">The data to compute the HMAC-SHA1 hash for.</param>
   /// <param name="key">The HMAC-SHA1 key.</param>
   /// <returns>The computed HMAC-SHA1 hash.</returns>
-
   public byte[] ComputeHMACSHA1(byte[] data, byte[] key) {
     using (HMACSHA1 hmacSha1 = new HMACSHA1(key)) {
       return hmacSha1.ComputeHash(data);
     }
   }
-
-
   /// <summary>
   /// Computes the SHA-256 hash of the given data.
   /// </summary>
   /// <param name="data">The data to compute the hash for.</param>
   /// <returns>The computed SHA-256 hash.</returns>
-
   public byte[] ComputeSHA256(byte[] data) {
     using (SHA256 sha256 = SHA256.Create()) {
       return sha256.ComputeHash(data);
     }
   }
-
   /// <summary>
   /// Compares two hash values for equality.
   /// </summary>
@@ -169,7 +155,6 @@ public class CryptoLibraryClass {
 
     return true;
   }
-
   /// <summary>
   /// Converts the contents of the input file to binary and saves it to the output file.
   /// </summary>
@@ -187,7 +172,6 @@ public class CryptoLibraryClass {
       fileStream.Write(buffer, 0, buffer.Length);
     }
   }
-
   /// <summary>
   /// Creates a buffer by combining the SHA1 digest, file data, and SHA256 digest.
   /// </summary>
@@ -204,13 +188,11 @@ public class CryptoLibraryClass {
     Buffer.BlockCopy(sha256Digest, 0, buffer, 4 + sha1Digest.Length + fileData.Length, sha256Digest.Length);
     return buffer;
   }
-
   /// <summary>
   /// Encrypts the data using AES encryption.
   /// </summary>
   /// <param name="data">The data to be encrypted.</param>
   /// <returns>The encrypted data.</returns>
-
   public byte[] EncryptData(byte[] data) {
     using (Aes aes = Aes.Create()) {
       aes.Key = key;
@@ -223,13 +205,11 @@ public class CryptoLibraryClass {
       }
     }
   }
-
   /// <summary>
   /// Decrypts the data using AES decryption.
   /// </summary>
   /// <param name="data">The data to be decrypted.</param>
   /// <returns>The decrypted data.</returns>
-
   public byte[] DecryptData(byte[] data) {
     using (System.Security.Cryptography.Aes aes = System.Security.Cryptography.Aes.Create()) {
       aes.Key = key;
@@ -242,7 +222,6 @@ public class CryptoLibraryClass {
       }
     }
   }
-
   /// <summary>
   /// Gets the password from the SHA256 digest.
   /// </summary>
@@ -251,7 +230,6 @@ public class CryptoLibraryClass {
   private int GetPasswordFromDigest(byte[] digest) {
     return BitConverter.ToInt32(digest, 0);
   }
-
   /// <summary>
   /// Converts a byte array to a hexadecimal string.
   /// </summary>
@@ -265,6 +243,5 @@ public class CryptoLibraryClass {
 
     return hex.ToString();
   }
-
 }
 }

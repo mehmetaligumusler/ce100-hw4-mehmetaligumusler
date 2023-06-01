@@ -12,7 +12,6 @@ namespace CryptoLibrary.Test {
 /// Test class for the CryptoTransformer class.
 /// </summary>
 public class CryptoLibraryTest {
-
   /// <summary>
   /// Test method to compare file contents. Returns true if the contents of the files are equal.
   /// </summary>
@@ -31,8 +30,6 @@ public class CryptoLibraryTest {
     bool result = CompareFileContents(inputFile, decinputFile);
     Assert.True(result);
   }
-
-
   /// <summary>
   /// Tests the TransformFile method with an invalid operation and expects an ArgumentException to be thrown.
   /// </summary>
@@ -50,8 +47,6 @@ public class CryptoLibraryTest {
     // Act & Assert
     Assert.Throws<ArgumentException>(() => crypto.TransformFile(inputFile, decfile, operation));
   }
-
-
   /// <summary>
   /// Tests the CryptoLibraryClass constructor with an invalid key size and expects an ArgumentException to be thrown.
   /// </summary>
@@ -62,7 +57,6 @@ public class CryptoLibraryTest {
     // Act & Assert
     Assert.Throws<ArgumentException>(() => new CryptoLibraryClass(invalidKey));
   }
-
   /// <summary>
   /// Tests the CompareHashes method when the hashes are not equal and expects false as the result.
   /// </summary>
@@ -78,7 +72,6 @@ public class CryptoLibraryTest {
     // Assert
     Assert.False(result);
   }
-
   /// <summary>
   /// Tests the CompareHashes method when the hashes have different lengths and expects false as the result.
   /// </summary>
@@ -94,7 +87,6 @@ public class CryptoLibraryTest {
     // Assert
     Assert.False(result);
   }
-
   /// <summary>
   /// Tests the ComputeSHA1 method with valid data and expects the correct hash to be computed.
   /// </summary>
@@ -111,7 +103,6 @@ public class CryptoLibraryTest {
     expectedHash = expectedHash.Trim().Replace(" ", "").ToLower();
     Assert.Equal(expectedHash, ByteArrayToHex(hash));
   }
-
   /// <summary>
   /// Tests the ComputeSHA256 method with valid data and expects the correct hash to be computed.
   /// </summary>
@@ -128,7 +119,6 @@ public class CryptoLibraryTest {
     expectedHash = expectedHash.Trim().Replace(" ", "").ToLower();
     Assert.Equal(expectedHash, ByteArrayToHex(hash));
   }
-
   /// <summary>
   /// Tests the AESEncryptAndDecrypt method with valid data and expects the encryption and decryption to be done correctly.
   /// </summary>
@@ -145,7 +135,6 @@ public class CryptoLibraryTest {
     string decryptedText = Encoding.UTF8.GetString(decrypted);
     Assert.Equal("Hello, World!", decryptedText);
   }
-
   /// <summary>
   /// Tests the ComputeHMACSHA1 method with valid data and expects the correct HMAC to be computed.
   /// </summary>
@@ -162,7 +151,6 @@ public class CryptoLibraryTest {
     expectedHmac = expectedHmac.Trim().Replace(" ", "").ToLower();
     Assert.Equal(expectedHmac, ByteArrayToHex(hmac));
   }
-
   /// <summary>
   /// Tests the ByteArrayToHex method to ensure correct conversion from byte array to hexadecimal string.
   /// </summary>
@@ -178,7 +166,6 @@ public class CryptoLibraryTest {
     // Assert
     Assert.Equal(expectedHex, actualHex);
   }
-
   /// <summary>
   /// Converts a byte array to a hexadecimal string.
   /// </summary>
@@ -192,12 +179,6 @@ public class CryptoLibraryTest {
 
     return hex.ToString();
   }
-
-
-
-
-
-
   /// <summary>
   /// Compares the contents of two files.
   /// </summary>
@@ -209,7 +190,6 @@ public class CryptoLibraryTest {
     string file2Contents = File.ReadAllText(filePath2);
     return file1Contents == file2Contents;
   }
-
   /// <summary>
   /// Deletes the contents of the files used in the tests.
   /// </summary>
@@ -236,13 +216,10 @@ public class CryptoLibraryTest {
     }
   }
 }
-
 /// <summary>
 /// Test class for the HOTPGenerator class.
 /// </summary>
 public class HOTPTests {
-
-
   /// <summary>
   /// Test method for HOTP generation.
   /// </summary>
@@ -255,7 +232,6 @@ public class HOTPTests {
     int result = crypto.HOTP(key, counter);
     Assert.Equal(result, expected);
   }
-
   /// <summary>
   /// Test method for HOTP generation.
   /// </summary>
@@ -268,7 +244,6 @@ public class HOTPTests {
     int result = crypto.HOTP(key, counter);
     Assert.Equal(result, expected);
   }
-
   /// <summary>
   /// Test method for HOTP generation.
   /// </summary>
