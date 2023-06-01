@@ -1,0 +1,729 @@
+\hypertarget{classCryptoLibrary_1_1CryptoLibraryClass}{}\doxysection{Crypto\+Library.\+Crypto\+Library\+Class Class Reference}
+\label{classCryptoLibrary_1_1CryptoLibraryClass}\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+
+
+Class for file transformation operations.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a15509972e9346c7a5e6c232f726f70c5}{Crypto\+Library\+Class}} (byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}})
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Crypto\+Trail\+Class class with the specified key. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a4d7b2db00f58940797ed213a52469eaa}{Transform\+File}} (string source\+File\+Path, string dest\+File\+Path, int operation)
+\begin{DoxyCompactList}\small\item\em Transforms a file based on the specified operation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a7a593ae6ea289e5373f0f75f44ede6e0}{HOTP}} (byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}}, int counter)
+\begin{DoxyCompactList}\small\item\em Calculates the HOTP (HMAC-\/based One-\/\+Time Password) value based on the specified key and counter. \end{DoxyCompactList}\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a2792b9c1681f2d8905023b17e13554d3}{Compute\+SHA1}} (byte\mbox{[}$\,$\mbox{]} data)
+\begin{DoxyCompactList}\small\item\em Computes the SHA-\/1 hash of the given data. \end{DoxyCompactList}\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a792a8e7f81c52c1ed7f4a7fd3154b454}{Compute\+HMACSHA1}} (byte\mbox{[}$\,$\mbox{]} data, byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}})
+\begin{DoxyCompactList}\small\item\em Computes the HMAC-\/\+SHA1 hash of the given data using the provided key. \end{DoxyCompactList}\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a9ef0da32b7cfd2aa5005a842e38867bc}{Compute\+SHA256}} (byte\mbox{[}$\,$\mbox{]} data)
+\begin{DoxyCompactList}\small\item\em Computes the SHA-\/256 hash of the given data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a482ad934a0d20de3b79c79661fb60364}{Compare\+Hashes}} (byte\mbox{[}$\,$\mbox{]} hash1, byte\mbox{[}$\,$\mbox{]} hash2)
+\begin{DoxyCompactList}\small\item\em Compares two hash values for equality. \end{DoxyCompactList}\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_adfd9dade06cc9357174a7119f864de5b}{Encrypt\+Data}} (byte\mbox{[}$\,$\mbox{]} data)
+\begin{DoxyCompactList}\small\item\em Encrypts the data using AES encryption. \end{DoxyCompactList}\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_acdff87d4c2e885080f766b865ba46a20}{Decrypt\+Data}} (byte\mbox{[}$\,$\mbox{]} data)
+\begin{DoxyCompactList}\small\item\em Decrypts the data using AES decryption. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a15aa7ffe9927153c346a02b0e0e5c51c}{Byte\+Array\+To\+Hex}} (byte\mbox{[}$\,$\mbox{]} bytes)
+\begin{DoxyCompactList}\small\item\em Converts a byte array to a hexadecimal string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a9e8c696e2fe9fc21fb67ee5ee6d241e3}{Calculate\+Dynamic\+Truncation}} (byte\mbox{[}$\,$\mbox{]} hmac\+Bytes)
+\begin{DoxyCompactList}\small\item\em Calculates the dynamic truncation value based on the provided HMAC-\/\+SHA1 hash. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_aa444cb8ae306ab76268642c1e5815653}{Convert\+To\+Binary}} (string input\+File, string output\+File)
+\begin{DoxyCompactList}\small\item\em Converts the contents of the input file to binary and saves it to the output file. \end{DoxyCompactList}\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a1d5051a8aedc22c9d63ee7a5790b3456}{Create\+Buffer}} (byte\mbox{[}$\,$\mbox{]} sha1D, byte\mbox{[}$\,$\mbox{]} file\+Data, byte\mbox{[}$\,$\mbox{]} sha256D)
+\begin{DoxyCompactList}\small\item\em Creates a buffer by combining the SHA1 digest, file data, and SHA256 digest. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_ab0a80fff0b79edf83761ae155b296620}{Get\+Password\+From\+Digest}} (byte\mbox{[}$\,$\mbox{]} digest)
+\begin{DoxyCompactList}\small\item\em Gets the password from the SHA256 digest. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}}
+\begin{DoxyCompactList}\small\item\em The encryption key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a4d86998e9b76670fb1c5acd79e551139}{Key\+Size\+In\+Bytes}} = 16
+\begin{DoxyCompactList}\small\item\em The size of the encryption key in bytes. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_aae6f67054dad08c013f826b4a72f5a64}{Block\+Size\+In\+Bytes}} = 16
+\begin{DoxyCompactList}\small\item\em The size of the encryption block in bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for file transformation operations. 
+
+
+
+Definition at line 8 of file Crypto\+Library.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a15509972e9346c7a5e6c232f726f70c5}\label{classCryptoLibrary_1_1CryptoLibraryClass_a15509972e9346c7a5e6c232f726f70c5}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!CryptoLibraryClass@{CryptoLibraryClass}}
+\index{CryptoLibraryClass@{CryptoLibraryClass}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{CryptoLibraryClass()}{CryptoLibraryClass()}}
+{\footnotesize\ttfamily Crypto\+Library.\+Crypto\+Library\+Class.\+Crypto\+Library\+Class (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{key }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the Crypto\+Trail\+Class class with the specified key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The encryption key.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Thrown when the key size is not equal to \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a4d86998e9b76670fb1c5acd79e551139}{Key\+Size\+In\+Bytes}}.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 26 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26                                         \{}
+\DoxyCodeLine{27     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}}.Length != \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a4d86998e9b76670fb1c5acd79e551139}{KeySizeInBytes}}) \{}
+\DoxyCodeLine{28       \textcolor{keywordflow}{throw} \textcolor{keyword}{new} ArgumentException(\$\textcolor{stringliteral}{"{}Key size must be \{KeySizeInBytes\} bytes."{}});}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     this.\mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}} = \textcolor{keyword}{new} \textcolor{keywordtype}{byte}[\mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}}.Length];}
+\DoxyCodeLine{32     Array.Copy(\mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}}, this.\mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}}, \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}}.Length);}
+\DoxyCodeLine{33   \}}
+
+\end{DoxyCode}
+
+
+References Crypto\+Library.\+Crypto\+Library\+Class.\+key, and Crypto\+Library.\+Crypto\+Library\+Class.\+Key\+Size\+In\+Bytes.
+
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+HOTP(), and Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File().
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a15aa7ffe9927153c346a02b0e0e5c51c}\label{classCryptoLibrary_1_1CryptoLibraryClass_a15aa7ffe9927153c346a02b0e0e5c51c}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!ByteArrayToHex@{ByteArrayToHex}}
+\index{ByteArrayToHex@{ByteArrayToHex}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{ByteArrayToHex()}{ByteArrayToHex()}}
+{\footnotesize\ttfamily string Crypto\+Library.\+Crypto\+Library\+Class.\+Byte\+Array\+To\+Hex (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Converts a byte array to a hexadecimal string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & The byte array to convert.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The hexadecimal representation of the byte array.
+\end{DoxyReturn}
+
+
+Definition at line 234 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{234                                              \{}
+\DoxyCodeLine{235     StringBuilder hex = \textcolor{keyword}{new} StringBuilder(bytes.Length * 2);}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237     \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{byte} b \textcolor{keywordflow}{in} bytes)}
+\DoxyCodeLine{238       hex.AppendFormat(\textcolor{stringliteral}{"{}\{0:x2\}"{}}, b);}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{240     \textcolor{keywordflow}{return} hex.ToString();}
+\DoxyCodeLine{241   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a9e8c696e2fe9fc21fb67ee5ee6d241e3}\label{classCryptoLibrary_1_1CryptoLibraryClass_a9e8c696e2fe9fc21fb67ee5ee6d241e3}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!CalculateDynamicTruncation@{CalculateDynamicTruncation}}
+\index{CalculateDynamicTruncation@{CalculateDynamicTruncation}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{CalculateDynamicTruncation()}{CalculateDynamicTruncation()}}
+{\footnotesize\ttfamily int Crypto\+Library.\+Crypto\+Library\+Class.\+Calculate\+Dynamic\+Truncation (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{hmac\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculates the dynamic truncation value based on the provided HMAC-\/\+SHA1 hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hmac\+Bytes} & The HMAC-\/\+SHA1 hash as a byte array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The dynamic truncation value as an unsigned integer.
+\end{DoxyReturn}
+
+
+Definition at line 100 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100                                                            \{}
+\DoxyCodeLine{101     \textcolor{keywordtype}{int} offset = hmacBytes[19] \& 0xf;}
+\DoxyCodeLine{102     \textcolor{keywordtype}{int} bin\_code = ((hmacBytes[offset] \& 0x7f) << 24)}
+\DoxyCodeLine{103                    | ((hmacBytes[offset + 1] \& 0xff) << 16)}
+\DoxyCodeLine{104                    | ((hmacBytes[offset + 2] \& 0xff) << 8)}
+\DoxyCodeLine{105                    | (hmacBytes[offset + 3] \& 0xff);}
+\DoxyCodeLine{106     \textcolor{keywordflow}{return} bin\_code;}
+\DoxyCodeLine{107   \}}
+
+\end{DoxyCode}
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+HOTP().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a482ad934a0d20de3b79c79661fb60364}\label{classCryptoLibrary_1_1CryptoLibraryClass_a482ad934a0d20de3b79c79661fb60364}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!CompareHashes@{CompareHashes}}
+\index{CompareHashes@{CompareHashes}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{CompareHashes()}{CompareHashes()}}
+{\footnotesize\ttfamily bool Crypto\+Library.\+Crypto\+Library\+Class.\+Compare\+Hashes (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{hash1,  }\item[{byte\mbox{[}$\,$\mbox{]}}]{hash2 }\end{DoxyParamCaption})}
+
+
+
+Compares two hash values for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hash1} & The first hash value as a byte array.\\
+\hline
+{\em hash2} & The second hash value as a byte array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the hash values are equal, otherwise false.
+\end{DoxyReturn}
+
+
+Definition at line 145 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{145                                                         \{}
+\DoxyCodeLine{146     \textcolor{keywordflow}{if} (hash1.Length != hash2.Length) \{}
+\DoxyCodeLine{147       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{148     \}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < hash1.Length; i++) \{}
+\DoxyCodeLine{151       \textcolor{keywordflow}{if} (hash1[i] != hash2[i]) \{}
+\DoxyCodeLine{152         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{153       \}}
+\DoxyCodeLine{154     \}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{157   \}}
+
+\end{DoxyCode}
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a792a8e7f81c52c1ed7f4a7fd3154b454}\label{classCryptoLibrary_1_1CryptoLibraryClass_a792a8e7f81c52c1ed7f4a7fd3154b454}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!ComputeHMACSHA1@{ComputeHMACSHA1}}
+\index{ComputeHMACSHA1@{ComputeHMACSHA1}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{ComputeHMACSHA1()}{ComputeHMACSHA1()}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} Crypto\+Library.\+Crypto\+Library\+Class.\+Compute\+HMACSHA1 (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{data,  }\item[{byte\mbox{[}$\,$\mbox{]}}]{key }\end{DoxyParamCaption})}
+
+
+
+Computes the HMAC-\/\+SHA1 hash of the given data using the provided key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to compute the HMAC-\/\+SHA1 hash for.\\
+\hline
+{\em key} & The HMAC-\/\+SHA1 key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The computed HMAC-\/\+SHA1 hash.
+\end{DoxyReturn}
+
+
+Definition at line 124 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{124                                                          \{}
+\DoxyCodeLine{125     \textcolor{keyword}{using} (HMACSHA1 hmacSha1 = \textcolor{keyword}{new} HMACSHA1(\mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}})) \{}
+\DoxyCodeLine{126       \textcolor{keywordflow}{return} hmacSha1.ComputeHash(data);}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128   \}}
+
+\end{DoxyCode}
+
+
+References Crypto\+Library.\+Crypto\+Library\+Class.\+key.
+
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+HOTP().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a2792b9c1681f2d8905023b17e13554d3}\label{classCryptoLibrary_1_1CryptoLibraryClass_a2792b9c1681f2d8905023b17e13554d3}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!ComputeSHA1@{ComputeSHA1}}
+\index{ComputeSHA1@{ComputeSHA1}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{ComputeSHA1()}{ComputeSHA1()}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} Crypto\+Library.\+Crypto\+Library\+Class.\+Compute\+SHA1 (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{data }\end{DoxyParamCaption})}
+
+
+
+Computes the SHA-\/1 hash of the given data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to compute the hash for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The computed SHA-\/1 hash.
+\end{DoxyReturn}
+
+
+Definition at line 113 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{113                                          \{}
+\DoxyCodeLine{114     \textcolor{keyword}{using} (SHA1 sha1 = SHA1.Create()) \{}
+\DoxyCodeLine{115       \textcolor{keywordflow}{return} sha1.ComputeHash(data);}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{117   \}}
+
+\end{DoxyCode}
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a9ef0da32b7cfd2aa5005a842e38867bc}\label{classCryptoLibrary_1_1CryptoLibraryClass_a9ef0da32b7cfd2aa5005a842e38867bc}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!ComputeSHA256@{ComputeSHA256}}
+\index{ComputeSHA256@{ComputeSHA256}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{ComputeSHA256()}{ComputeSHA256()}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} Crypto\+Library.\+Crypto\+Library\+Class.\+Compute\+SHA256 (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{data }\end{DoxyParamCaption})}
+
+
+
+Computes the SHA-\/256 hash of the given data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to compute the hash for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The computed SHA-\/256 hash.
+\end{DoxyReturn}
+
+
+Definition at line 134 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134                                            \{}
+\DoxyCodeLine{135     \textcolor{keyword}{using} (SHA256 sha256 = SHA256.Create()) \{}
+\DoxyCodeLine{136       \textcolor{keywordflow}{return} sha256.ComputeHash(data);}
+\DoxyCodeLine{137     \}}
+\DoxyCodeLine{138   \}}
+
+\end{DoxyCode}
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_aa444cb8ae306ab76268642c1e5815653}\label{classCryptoLibrary_1_1CryptoLibraryClass_aa444cb8ae306ab76268642c1e5815653}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!ConvertToBinary@{ConvertToBinary}}
+\index{ConvertToBinary@{ConvertToBinary}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{ConvertToBinary()}{ConvertToBinary()}}
+{\footnotesize\ttfamily void Crypto\+Library.\+Crypto\+Library\+Class.\+Convert\+To\+Binary (\begin{DoxyParamCaption}\item[{string}]{input\+File,  }\item[{string}]{output\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Converts the contents of the input file to binary and saves it to the output file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & The path of the input file.\\
+\hline
+{\em output\+File} & The path of the output file.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 163 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163                                                                     \{}
+\DoxyCodeLine{164     \textcolor{keywordtype}{byte}[] buffer;}
+\DoxyCodeLine{165     \textcolor{keyword}{using} (FileStream fileStream = File.OpenRead(inputFile)) \{}
+\DoxyCodeLine{166       buffer = \textcolor{keyword}{new} \textcolor{keywordtype}{byte}[fileStream.Length];}
+\DoxyCodeLine{167       fileStream.Read(buffer, 0, buffer.Length);}
+\DoxyCodeLine{168     \}}
+\DoxyCodeLine{169     \textcolor{keyword}{using} (FileStream fileStream = File.OpenWrite(outputFile)) \{}
+\DoxyCodeLine{170       fileStream.Write(buffer, 0, buffer.Length);}
+\DoxyCodeLine{171     \}}
+\DoxyCodeLine{172   \}}
+
+\end{DoxyCode}
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a1d5051a8aedc22c9d63ee7a5790b3456}\label{classCryptoLibrary_1_1CryptoLibraryClass_a1d5051a8aedc22c9d63ee7a5790b3456}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!CreateBuffer@{CreateBuffer}}
+\index{CreateBuffer@{CreateBuffer}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{CreateBuffer()}{CreateBuffer()}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} Crypto\+Library.\+Crypto\+Library\+Class.\+Create\+Buffer (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{sha1D,  }\item[{byte\mbox{[}$\,$\mbox{]}}]{file\+Data,  }\item[{byte\mbox{[}$\,$\mbox{]}}]{sha256D }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates a buffer by combining the SHA1 digest, file data, and SHA256 digest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sha1D} & The SHA1 digest.\\
+\hline
+{\em file\+Data} & The file data.\\
+\hline
+{\em sha256D} & The SHA256 digest.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The combined buffer.
+\end{DoxyReturn}
+
+
+Definition at line 180 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{180                                                                              \{}
+\DoxyCodeLine{181     \textcolor{keywordtype}{int} bufferLength = 4 + sha1D.Length + fileData.Length + sha256D.Length + \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_aae6f67054dad08c013f826b4a72f5a64}{BlockSizeInBytes}};}
+\DoxyCodeLine{182     \textcolor{keywordtype}{byte}[] buffer = \textcolor{keyword}{new} \textcolor{keywordtype}{byte}[bufferLength];}
+\DoxyCodeLine{183     Buffer.BlockCopy(BitConverter.GetBytes(fileData.Length), 0, buffer, 0, 4);}
+\DoxyCodeLine{184     Buffer.BlockCopy(sha1D, 0, buffer, 4, sha1D.Length);}
+\DoxyCodeLine{185     Buffer.BlockCopy(fileData, 0, buffer, 4 + sha1D.Length, fileData.Length);}
+\DoxyCodeLine{186     Buffer.BlockCopy(sha256D, 0, buffer, 4 + sha1D.Length + fileData.Length, sha256D.Length);}
+\DoxyCodeLine{187     \textcolor{keywordflow}{return} buffer;}
+\DoxyCodeLine{188   \}}
+
+\end{DoxyCode}
+
+
+References Crypto\+Library.\+Crypto\+Library\+Class.\+Block\+Size\+In\+Bytes.
+
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_acdff87d4c2e885080f766b865ba46a20}\label{classCryptoLibrary_1_1CryptoLibraryClass_acdff87d4c2e885080f766b865ba46a20}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!DecryptData@{DecryptData}}
+\index{DecryptData@{DecryptData}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{DecryptData()}{DecryptData()}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} Crypto\+Library.\+Crypto\+Library\+Class.\+Decrypt\+Data (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{data }\end{DoxyParamCaption})}
+
+
+
+Decrypts the data using AES decryption. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to be decrypted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decrypted data.
+\end{DoxyReturn}
+
+
+Definition at line 210 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{210                                          \{}
+\DoxyCodeLine{211     \textcolor{keyword}{using} (System.Security.Cryptography.Aes aes = System.Security.Cryptography.Aes.Create()) \{}
+\DoxyCodeLine{212       aes.Key = \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}};}
+\DoxyCodeLine{213       aes.IV = \textcolor{keyword}{new} \textcolor{keywordtype}{byte}[16];}
+\DoxyCodeLine{214       aes.Mode = CipherMode.CBC;}
+\DoxyCodeLine{215       aes.Padding = PaddingMode.PKCS7;}
+\DoxyCodeLine{216       \textcolor{keyword}{using} (ICryptoTransform decryptor = aes.CreateDecryptor()) \{}
+\DoxyCodeLine{217         \textcolor{keywordflow}{return} decryptor.TransformFinalBlock(data, 0, data.Length);}
+\DoxyCodeLine{218       \}}
+\DoxyCodeLine{219     \}}
+\DoxyCodeLine{220   \}}
+
+\end{DoxyCode}
+
+
+References Crypto\+Library.\+Crypto\+Library\+Class.\+key.
+
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_adfd9dade06cc9357174a7119f864de5b}\label{classCryptoLibrary_1_1CryptoLibraryClass_adfd9dade06cc9357174a7119f864de5b}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!EncryptData@{EncryptData}}
+\index{EncryptData@{EncryptData}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{EncryptData()}{EncryptData()}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} Crypto\+Library.\+Crypto\+Library\+Class.\+Encrypt\+Data (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{data }\end{DoxyParamCaption})}
+
+
+
+Encrypts the data using AES encryption. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to be encrypted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encrypted data.
+\end{DoxyReturn}
+
+
+Definition at line 194 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{194                                          \{}
+\DoxyCodeLine{195     \textcolor{keyword}{using} (Aes aes = Aes.Create()) \{}
+\DoxyCodeLine{196       aes.Key = \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}};}
+\DoxyCodeLine{197       aes.IV = \textcolor{keyword}{new} \textcolor{keywordtype}{byte}[16];}
+\DoxyCodeLine{198       aes.Mode = CipherMode.CBC;}
+\DoxyCodeLine{199       aes.Padding = PaddingMode.PKCS7;}
+\DoxyCodeLine{200       \textcolor{keyword}{using} (ICryptoTransform encryptor = aes.CreateEncryptor()) \{}
+\DoxyCodeLine{201         \textcolor{keywordflow}{return} encryptor.TransformFinalBlock(data, 0, data.Length);}
+\DoxyCodeLine{202       \}}
+\DoxyCodeLine{203     \}}
+\DoxyCodeLine{204   \}}
+
+\end{DoxyCode}
+
+
+References Crypto\+Library.\+Crypto\+Library\+Class.\+key.
+
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_ab0a80fff0b79edf83761ae155b296620}\label{classCryptoLibrary_1_1CryptoLibraryClass_ab0a80fff0b79edf83761ae155b296620}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!GetPasswordFromDigest@{GetPasswordFromDigest}}
+\index{GetPasswordFromDigest@{GetPasswordFromDigest}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{GetPasswordFromDigest()}{GetPasswordFromDigest()}}
+{\footnotesize\ttfamily int Crypto\+Library.\+Crypto\+Library\+Class.\+Get\+Password\+From\+Digest (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{digest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the password from the SHA256 digest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em digest} & The SHA256 digest.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The password as an integer.
+\end{DoxyReturn}
+
+
+Definition at line 226 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{226                                                    \{}
+\DoxyCodeLine{227     \textcolor{keywordflow}{return} BitConverter.ToInt32(digest, 0);}
+\DoxyCodeLine{228   \}}
+
+\end{DoxyCode}
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a7a593ae6ea289e5373f0f75f44ede6e0}\label{classCryptoLibrary_1_1CryptoLibraryClass_a7a593ae6ea289e5373f0f75f44ede6e0}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!HOTP@{HOTP}}
+\index{HOTP@{HOTP}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{HOTP()}{HOTP()}}
+{\footnotesize\ttfamily int Crypto\+Library.\+Crypto\+Library\+Class.\+HOTP (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{key,  }\item[{int}]{counter }\end{DoxyParamCaption})}
+
+
+
+Calculates the HOTP (HMAC-\/based One-\/\+Time Password) value based on the specified key and counter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The HMAC key.\\
+\hline
+{\em counter} & The counter value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated HOTP value.
+\end{DoxyReturn}
+
+
+Definition at line 88 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88                                            \{}
+\DoxyCodeLine{89     \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a15509972e9346c7a5e6c232f726f70c5}{CryptoLibraryClass}} crypto = \textcolor{keyword}{new} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a15509972e9346c7a5e6c232f726f70c5}{CryptoLibraryClass}}(\mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}});}
+\DoxyCodeLine{90     \textcolor{keywordtype}{byte}[] hmacBytes = crypto.ComputeHMACSHA1(\mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}}, BitConverter.GetBytes(counter));}
+\DoxyCodeLine{91     \textcolor{keywordtype}{int} sbits = \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a9e8c696e2fe9fc21fb67ee5ee6d241e3}{CalculateDynamicTruncation}}(hmacBytes);}
+\DoxyCodeLine{92     \textcolor{keywordtype}{int} hotpValue = (int)(sbits \% 1000000);}
+\DoxyCodeLine{93     \textcolor{keywordflow}{return} hotpValue;}
+\DoxyCodeLine{94   \}}
+
+\end{DoxyCode}
+
+
+References Crypto\+Library.\+Crypto\+Library\+Class.\+Calculate\+Dynamic\+Truncation(), Crypto\+Library.\+Crypto\+Library\+Class.\+Compute\+HMACSHA1(), Crypto\+Library.\+Crypto\+Library\+Class.\+Crypto\+Library\+Class(), and Crypto\+Library.\+Crypto\+Library\+Class.\+key.
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a4d7b2db00f58940797ed213a52469eaa}\label{classCryptoLibrary_1_1CryptoLibraryClass_a4d7b2db00f58940797ed213a52469eaa}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!TransformFile@{TransformFile}}
+\index{TransformFile@{TransformFile}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{TransformFile()}{TransformFile()}}
+{\footnotesize\ttfamily int Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File (\begin{DoxyParamCaption}\item[{string}]{source\+File\+Path,  }\item[{string}]{dest\+File\+Path,  }\item[{int}]{operation }\end{DoxyParamCaption})}
+
+
+
+Transforms a file based on the specified operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+File\+Path} & The path of the source file.\\
+\hline
+{\em dest\+File\+Path} & The path of the destination file.\\
+\hline
+{\em operation} & The operation to perform. 0 for decryption, 1 for encryption.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If operation is 1, returns the password obtained from the SHA256 digest. Otherwise, returns 0.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Thrown when an invalid operation is specified.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 42 of file Crypto\+Library.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                                                                                       \{}
+\DoxyCodeLine{43     \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a15509972e9346c7a5e6c232f726f70c5}{CryptoLibraryClass}} crypto = \textcolor{keyword}{new} \mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a15509972e9346c7a5e6c232f726f70c5}{CryptoLibraryClass}}(\mbox{\hyperlink{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}{key}});}
+\DoxyCodeLine{44     \textcolor{keywordtype}{string} newsourceFilePath = \textcolor{stringliteral}{"{}Hello.bin"{}};}
+\DoxyCodeLine{45     crypto.ConvertToBinary(sourceFilePath, newsourceFilePath);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keywordflow}{if} (operation == 1) \{}
+\DoxyCodeLine{48       \textcolor{keywordtype}{byte}[] fileData = File.ReadAllBytes(newsourceFilePath);}
+\DoxyCodeLine{49       \textcolor{keywordtype}{byte}[] sha1D = crypto.ComputeSHA1(fileData);}
+\DoxyCodeLine{50       \textcolor{keywordtype}{byte}[] sha256D = crypto.ComputeSHA256(fileData);}
+\DoxyCodeLine{51       \textcolor{keywordtype}{byte}[] buffer = crypto.CreateBuffer(sha1D, fileData, sha256D);}
+\DoxyCodeLine{52       \textcolor{keywordtype}{byte}[] encryptedBuffer = crypto.EncryptData(buffer);}
+\DoxyCodeLine{53       File.WriteAllBytes(destFilePath, encryptedBuffer);}
+\DoxyCodeLine{54       \textcolor{keywordflow}{return} crypto.GetPasswordFromDigest(encryptedBuffer);}
+\DoxyCodeLine{55     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operation == 0) \{}
+\DoxyCodeLine{56       \textcolor{keywordtype}{byte}[] encryptedBuffer = File.ReadAllBytes(sourceFilePath);}
+\DoxyCodeLine{57       \textcolor{keywordtype}{byte}[] decryptedData = crypto.DecryptData(encryptedBuffer);}
+\DoxyCodeLine{58       \textcolor{keywordtype}{int} length = BitConverter.ToInt32(decryptedData, 0);}
+\DoxyCodeLine{59       \textcolor{keywordtype}{int} sha1D\_Offset = 4;}
+\DoxyCodeLine{60       \textcolor{keywordtype}{int} fileData\_Offset = 24;}
+\DoxyCodeLine{61       \textcolor{keywordtype}{int} sha256D\_Offset = 24 + length;}
+\DoxyCodeLine{62       \textcolor{keywordtype}{byte}[] sha1D = \textcolor{keyword}{new} \textcolor{keywordtype}{byte}[20];}
+\DoxyCodeLine{63       Buffer.BlockCopy(decryptedData, sha1D\_Offset, sha1D, 0, 20);}
+\DoxyCodeLine{64       \textcolor{keywordtype}{byte}[] fileData = \textcolor{keyword}{new} \textcolor{keywordtype}{byte}[length];}
+\DoxyCodeLine{65       Buffer.BlockCopy(decryptedData, fileData\_Offset, fileData, 0, length);}
+\DoxyCodeLine{66       \textcolor{keywordtype}{byte}[] sha256D = \textcolor{keyword}{new} \textcolor{keywordtype}{byte}[32];}
+\DoxyCodeLine{67       Buffer.BlockCopy(decryptedData, sha256D\_Offset, sha256D, 0, 32);}
+\DoxyCodeLine{68       \textcolor{keywordtype}{byte}[] calsha1D = crypto.ComputeSHA1(fileData);}
+\DoxyCodeLine{69       \textcolor{keywordtype}{byte}[] calsha256D = crypto.ComputeSHA256(fileData);}
+\DoxyCodeLine{70       \textcolor{keywordtype}{bool} sha1Val = crypto.CompareHashes(sha1D, calsha1D);}
+\DoxyCodeLine{71       \textcolor{keywordtype}{bool} sha256Val = crypto.CompareHashes(sha256D, calsha256D);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73       \textcolor{keywordflow}{if} (sha1Val \&\& sha256Val) \{}
+\DoxyCodeLine{74         File.WriteAllBytes(destFilePath, fileData);}
+\DoxyCodeLine{75       \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{78     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{79       \textcolor{keywordflow}{throw} \textcolor{keyword}{new} ArgumentException(\textcolor{stringliteral}{"{}Invalid operation specified. Operation must be 0 or 1."{}});}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81   \}}
+
+\end{DoxyCode}
+
+
+References Crypto\+Library.\+Crypto\+Library\+Class.\+Compare\+Hashes(), Crypto\+Library.\+Crypto\+Library\+Class.\+Compute\+SHA1(), Crypto\+Library.\+Crypto\+Library\+Class.\+Compute\+SHA256(), Crypto\+Library.\+Crypto\+Library\+Class.\+Convert\+To\+Binary(), Crypto\+Library.\+Crypto\+Library\+Class.\+Create\+Buffer(), Crypto\+Library.\+Crypto\+Library\+Class.\+Crypto\+Library\+Class(), Crypto\+Library.\+Crypto\+Library\+Class.\+Decrypt\+Data(), Crypto\+Library.\+Crypto\+Library\+Class.\+Encrypt\+Data(), Crypto\+Library.\+Crypto\+Library\+Class.\+Get\+Password\+From\+Digest(), and Crypto\+Library.\+Crypto\+Library\+Class.\+key.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_aae6f67054dad08c013f826b4a72f5a64}\label{classCryptoLibrary_1_1CryptoLibraryClass_aae6f67054dad08c013f826b4a72f5a64}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!BlockSizeInBytes@{BlockSizeInBytes}}
+\index{BlockSizeInBytes@{BlockSizeInBytes}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{BlockSizeInBytes}{BlockSizeInBytes}}
+{\footnotesize\ttfamily const int Crypto\+Library.\+Crypto\+Library\+Class.\+Block\+Size\+In\+Bytes = 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The size of the encryption block in bytes. 
+
+
+
+Definition at line 16 of file Crypto\+Library.\+cs.
+
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Create\+Buffer().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}\label{classCryptoLibrary_1_1CryptoLibraryClass_a713259d30229aa85f678c8471c8526a7}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!key@{key}}
+\index{key@{key}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily readonly byte \mbox{[}$\,$\mbox{]} Crypto\+Library.\+Crypto\+Library\+Class.\+key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The encryption key. 
+
+
+
+Definition at line 20 of file Crypto\+Library.\+cs.
+
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Compute\+HMACSHA1(), Crypto\+Library.\+Crypto\+Library\+Class.\+Crypto\+Library\+Class(), Crypto\+Library.\+Crypto\+Library\+Class.\+Decrypt\+Data(), Crypto\+Library.\+Crypto\+Library\+Class.\+Encrypt\+Data(), Crypto\+Library.\+Crypto\+Library\+Class.\+HOTP(), and Crypto\+Library.\+Crypto\+Library\+Class.\+Transform\+File().
+
+\mbox{\Hypertarget{classCryptoLibrary_1_1CryptoLibraryClass_a4d86998e9b76670fb1c5acd79e551139}\label{classCryptoLibrary_1_1CryptoLibraryClass_a4d86998e9b76670fb1c5acd79e551139}} 
+\index{CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}!KeySizeInBytes@{KeySizeInBytes}}
+\index{KeySizeInBytes@{KeySizeInBytes}!CryptoLibrary.CryptoLibraryClass@{CryptoLibrary.CryptoLibraryClass}}
+\doxysubsubsection{\texorpdfstring{KeySizeInBytes}{KeySizeInBytes}}
+{\footnotesize\ttfamily const int Crypto\+Library.\+Crypto\+Library\+Class.\+Key\+Size\+In\+Bytes = 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The size of the encryption key in bytes. 
+
+
+
+Definition at line 12 of file Crypto\+Library.\+cs.
+
+
+
+Referenced by Crypto\+Library.\+Crypto\+Library\+Class.\+Crypto\+Library\+Class().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Crypto\+Library/\mbox{\hyperlink{CryptoLibrary_8cs}{Crypto\+Library.\+cs}}\end{DoxyCompactItemize}

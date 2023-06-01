@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="classCryptoLibrary_1_1CryptoLibraryClass" kind="class"><name>CryptoLibrary::CryptoLibraryClass</name>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a4d86998e9b76670fb1c5acd79e551139" kind="variable"><name>KeySizeInBytes</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1aae6f67054dad08c013f826b4a72f5a64" kind="variable"><name>BlockSizeInBytes</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a713259d30229aa85f678c8471c8526a7" kind="variable"><name>key</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a15509972e9346c7a5e6c232f726f70c5" kind="function"><name>CryptoLibraryClass</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a4d7b2db00f58940797ed213a52469eaa" kind="function"><name>TransformFile</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a7a593ae6ea289e5373f0f75f44ede6e0" kind="function"><name>HOTP</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a2792b9c1681f2d8905023b17e13554d3" kind="function"><name>ComputeSHA1</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a792a8e7f81c52c1ed7f4a7fd3154b454" kind="function"><name>ComputeHMACSHA1</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a9ef0da32b7cfd2aa5005a842e38867bc" kind="function"><name>ComputeSHA256</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a482ad934a0d20de3b79c79661fb60364" kind="function"><name>CompareHashes</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1adfd9dade06cc9357174a7119f864de5b" kind="function"><name>EncryptData</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1acdff87d4c2e885080f766b865ba46a20" kind="function"><name>DecryptData</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a15aa7ffe9927153c346a02b0e0e5c51c" kind="function"><name>ByteArrayToHex</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a9e8c696e2fe9fc21fb67ee5ee6d241e3" kind="function"><name>CalculateDynamicTruncation</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1aa444cb8ae306ab76268642c1e5815653" kind="function"><name>ConvertToBinary</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1a1d5051a8aedc22c9d63ee7a5790b3456" kind="function"><name>CreateBuffer</name></member>
+    <member refid="classCryptoLibrary_1_1CryptoLibraryClass_1ab0a80fff0b79edf83761ae155b296620" kind="function"><name>GetPasswordFromDigest</name></member>
+  </compound>
+  <compound refid="namespaceCryptoLibrary" kind="namespace"><name>CryptoLibrary</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Security_1_1Cryptography" kind="namespace"><name>System::Security::Cryptography</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="CryptoLibrary_8cs" kind="file"><name>CryptoLibrary.cs</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="dir_95a2de92b8e7ec82e872f1469a7c489c" kind="dir"><name>CryptoLibrary</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

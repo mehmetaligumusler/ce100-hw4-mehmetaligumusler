@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>CE100,<sp/>Homework<sp/>4<sp/>/<sp/>Eternals<sp/>Team<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Releases</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[![GitHub<sp/>release<sp/>badge](https://badgen.net/github/release/mehmetaligumusler/ce100-hw4-mehmetaligumusler)](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/releases/latest)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Platforms</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Ubuntu<sp/>badge](assets/badge-ubuntu.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![macOS<sp/>badge](assets/badge-macos.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Windows<sp/>badge](assets/badge-windows.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Test<sp/>Coverage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![.NET<sp/>Core<sp/>Release<sp/>with<sp/>Test<sp/>Coverage<sp/>Control](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/actions/workflows/build_check_ubuntu_windows.yml/badge.svg)](https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/actions/workflows/build_check_ubuntu_windows.yml)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![All](assets/badge_combined.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Branch<sp/>Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Branch<sp/>Coverage](assets/badge_branchcoverage.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Line<sp/>Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Line<sp/>Coverage](assets/badge_linecoverage.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Method<sp/>Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Method<sp/>Coverage](assets/badge_methodcoverage.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Project<sp/>Description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">CE100,<sp/>Homework<sp/>4</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>use<sp/>this<sp/>application,<sp/>you<sp/>need<sp/>to<sp/>have<sp/>Git<sp/>and<sp/>Doxygen<sp/>installed<sp/>on<sp/>your<sp/>computer.<sp/>The<sp/>console<sp/>application<sp/>is<sp/>built<sp/>using<sp/>.NET<sp/>Core<sp/>Self-Contained<sp/>Deployment,<sp/>which<sp/>allows<sp/>it<sp/>to<sp/>run<sp/>on<sp/>MacOS,<sp/>Linux,<sp/>and<sp/>Windows<sp/>platforms.<sp/>No<sp/>setup<sp/>is<sp/>required;<sp/>simply<sp/>download<sp/>and<sp/>extract<sp/>the<sp/>files<sp/>to<sp/>a<sp/>folder<sp/>of<sp/>your<sp/>choice.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>don&apos;t<sp/>need<sp/>to<sp/>install<sp/>any<sp/>plugins.<sp/>You<sp/>can<sp/>download<sp/>it<sp/>for<sp/>all<sp/>platforms<sp/>from<sp/>the<sp/>Releases<sp/>window.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Contributing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Gökay<sp/>DERVISOĞLU,<sp/>(gokay_dervisoglu21@erdogan.edu.tr)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>project<sp/>is<sp/>part<sp/>of<sp/>my<sp/>research<sp/>and<sp/>not<sp/>permitted<sp/>for<sp/>commercial<sp/>usage.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Dependencies</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Doxygen](https://www.doxygen.nl/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Chocolatey](https://chocolatey.org/install)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Scoop](https://scoop.sh/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Reportgenerator<sp/>](https://reportgenerator.io/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>It<sp/>helps<sp/>you<sp/>to<sp/>send<sp/>the<sp/>text<sp/>in<sp/>the<sp/>specified<sp/>.txt<sp/>securely<sp/>by<sp/>encrypting<sp/>it<sp/>with<sp/>the<sp/>help<sp/>of<sp/>a<sp/>key.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>It<sp/>helps<sp/>you<sp/>to<sp/>use<sp/>the<sp/>encrypted<sp/>file<sp/>securely<sp/>by<sp/>decrypting<sp/>the<sp/>encrypted<sp/>file<sp/>with<sp/>the<sp/>help<sp/>of<sp/>a<sp/>key.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>You<sp/>can<sp/>also<sp/>produce<sp/>disposable<sp/>keys.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Testing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tests<sp/>are<sp/>Underdevelopment<sp/>with<sp/>Real<sp/>Environment</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Support</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Project<sp/>can<sp/>be<sp/>updated<sp/>according<sp/>issues.</highlight></codeline>
+<codeline><highlight class="normal">Contact<sp/>me<sp/>if<sp/>you<sp/>have<sp/>any<sp/>questions.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Contact</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Mehmet<sp/>Ali<sp/>GUMUSLER,<sp/>(mehmetali_gumusler21@erdogan.edu.tr)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Gökay<sp/>DERVISOĞLU,<sp/>(gokay_dervisoglu21@erdogan.edu.tr)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Instructor:<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Ugur<sp/>CORUH</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Acknowledgments</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Microsoft](https://visualstudio.microsoft.com/tr/vs/community/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Github](https://github.com/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Doxygen](https://www.doxygen.nl/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>About</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Some<sp/>algorithms<sp/>in<sp/>C#.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

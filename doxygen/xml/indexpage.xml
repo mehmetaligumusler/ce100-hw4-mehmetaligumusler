@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>CE100, Homework 4 / Eternals Team</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/> </para>
+<sect1 id="index_1autotoc_md1">
+<title>Releases</title>
+<para><itemizedlist>
+<listitem><para><ulink url="https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/releases/latest"><image type="html" name="https://badgen.net/github/release/mehmetaligumusler/ce100-hw4-mehmetaligumusler" alt="GitHub release badge" inline="yes"></image>
+</ulink></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Platforms</title>
+<para><itemizedlist>
+<listitem><para><image type="html" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+<image type="latex" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+<image type="rtf" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+<image type="docbook" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+</para>
+</listitem><listitem><para><image type="html" name="badge-macos.svg" inline="yes">macOS badge</image>
+<image type="latex" name="badge-macos.svg" inline="yes">macOS badge</image>
+<image type="rtf" name="badge-macos.svg" inline="yes">macOS badge</image>
+<image type="docbook" name="badge-macos.svg" inline="yes">macOS badge</image>
+</para>
+</listitem><listitem><para><image type="html" name="badge-windows.svg" inline="yes">Windows badge</image>
+<image type="latex" name="badge-windows.svg" inline="yes">Windows badge</image>
+<image type="rtf" name="badge-windows.svg" inline="yes">Windows badge</image>
+<image type="docbook" name="badge-windows.svg" inline="yes">Windows badge</image>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>Test Coverage</title>
+<para><ulink url="https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/actions/workflows/build_check_ubuntu_windows.yml"><image type="html" name="https://github.com/mehmetaligumusler/ce100-hw4-mehmetaligumusler/actions/workflows/build_check_ubuntu_windows.yml/badge.svg" alt=".NET Core Release with Test Coverage Control" inline="yes"></image>
+</ulink></para>
+<para><bold>Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="badge_combined.svg" inline="yes">All</image>
+<image type="latex" name="badge_combined.svg" inline="yes">All</image>
+<image type="rtf" name="badge_combined.svg" inline="yes">All</image>
+<image type="docbook" name="badge_combined.svg" inline="yes">All</image>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Branch Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+<image type="latex" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+<image type="rtf" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+<image type="docbook" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Line Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+<image type="latex" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+<image type="rtf" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+<image type="docbook" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Method Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+<image type="latex" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+<image type="rtf" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+<image type="docbook" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+</para>
+</listitem></itemizedlist>
+</para>
+<sect2 id="index_1autotoc_md4">
+<title>Project Description</title>
+<para>CE100, Homework 4</para>
+</sect2>
+<sect2 id="index_1autotoc_md5">
+<title>Installation</title>
+<para>To use this application, you need to have Git and Doxygen installed on your computer. The console application is built using .NET Core Self-Contained Deployment, which allows it to run on MacOS, Linux, and Windows platforms. No setup is required; simply download and extract the files to a folder of your choice.</para>
+</sect2>
+<sect2 id="index_1autotoc_md6">
+<title>Usage</title>
+<para>You don&apos;t need to install any plugins. You can download it for all platforms from the Releases window.</para>
+</sect2>
+<sect2 id="index_1autotoc_md7">
+<title>Contributing</title>
+<para>Gökay DERVISOĞLU, (<ulink url="mailto:gokay_dervisoglu21@erdogan.edu.tr">gokay_dervisoglu21@erdogan.edu.tr</ulink>)</para>
+</sect2>
+<sect2 id="index_1autotoc_md8">
+<title>License</title>
+<para>This project is part of my research and not permitted for commercial usage.</para>
+</sect2>
+<sect2 id="index_1autotoc_md9">
+<title>Dependencies</title>
+<para><itemizedlist>
+<listitem><para><ulink url="https://www.doxygen.nl/">Doxygen</ulink></para>
+</listitem><listitem><para><ulink url="https://chocolatey.org/install">Chocolatey</ulink></para>
+</listitem><listitem><para><ulink url="https://scoop.sh/">Scoop</ulink></para>
+</listitem><listitem><para><ulink url="https://reportgenerator.io/">Reportgenerator</ulink></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md10">
+<title>Features</title>
+<para><itemizedlist>
+<listitem><para>It helps you to send the text in the specified .txt securely by encrypting it with the help of a key.</para>
+</listitem><listitem><para>It helps you to use the encrypted file securely by decrypting the encrypted file with the help of a key.</para>
+</listitem><listitem><para>You can also produce disposable keys.</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md11">
+<title>Testing</title>
+<para>Tests are Underdevelopment with Real Environment</para>
+</sect2>
+<sect2 id="index_1autotoc_md12">
+<title>Support</title>
+<para>Project can be updated according issues. Contact me if you have any questions.</para>
+</sect2>
+<sect2 id="index_1autotoc_md13">
+<title>Contact</title>
+<para><itemizedlist>
+<listitem><para>Mehmet Ali GUMUSLER, (<ulink url="mailto:mehmetali_gumusler21@erdogan.edu.tr">mehmetali_gumusler21@erdogan.edu.tr</ulink>)</para>
+</listitem><listitem><para>Gökay DERVISOĞLU, (<ulink url="mailto:gokay_dervisoglu21@erdogan.edu.tr">gokay_dervisoglu21@erdogan.edu.tr</ulink>)</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md14">
+<title>Instructor:</title>
+<para><itemizedlist>
+<listitem><para>Ugur CORUH</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md15">
+<title>Acknowledgments</title>
+<para><itemizedlist>
+<listitem><para><ulink url="https://visualstudio.microsoft.com/tr/vs/community/">Microsoft</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/">Github</ulink></para>
+</listitem><listitem><para><ulink url="https://www.doxygen.nl/">Doxygen</ulink></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md16">
+<title>About</title>
+<para>Some algorithms in C#. </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>
